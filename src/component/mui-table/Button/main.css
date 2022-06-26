@@ -1,0 +1,45 @@
+
+
+.sellMenu {
+  position: relative;
+  cursor: pointer;
+}
+
+.sellMenu .all {
+  fill: white;
+}
+
+.sellMenu .top {
+  fill: #23e5db;
+}
+
+.sellMenu .left {
+  fill: #ffce32;
+}
+
+.sellMenu .right {
+  fill: #3a77ff;
+}
+.sellMenu .sellMenuContent {
+  width:104;
+  height:48;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+  color: #051e20;
+}
+
+/* .sellMenu .sellMenuContent svg {
+  align-items: center;
+} */
+.sellMenu .sellMenuContent span {
+  margin-top: 2px;
+  margin-left: 4px;
+  margin-right: 2px;
+}
