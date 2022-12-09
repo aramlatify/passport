@@ -26,5 +26,4 @@ const messaging = getMessaging();
 const storage = getStorage();
 const database = getDatabase(app);
 const auth = getAuth();
-
 export { app, db, storage, auth,database };
