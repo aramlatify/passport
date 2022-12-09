@@ -151,7 +151,7 @@ const MaterialTableSearchDemo = ({id}) => {
  
   const B = [
     {
-      Fullname: "جبار حسن مجيد",
+      Fullname: "ارام حسن مجيد",
       Mothername: "مجيد",
       Shurename: "اسكه محمد"
     },
