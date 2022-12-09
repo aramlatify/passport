@@ -6,13 +6,14 @@ import { getAuth } from "firebase/auth";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDsGwKUauBItDD5WlcwK0PQQQvU8xUZv_g",
-  authDomain: "aram-326907.firebaseapp.com",
-  databaseURL: "https://aram-326907-default-rtdb.firebaseio.com",
-  projectId: "aram-326907",
-  storageBucket: "aram-326907.appspot.com",
-  messagingSenderId: "181874102480",
-  appId: "1:181874102480:web:5ecced8e0e52e43af84ed5"
+  apiKey: "AIzaSyDF9p_eQxpI9nlBNbgroIlQWNXNAtWW0fg",
+  authDomain: "passportgarmian.firebaseapp.com",
+  databaseURL: "https://passportgarmian-default-rtdb.firebaseio.com",
+  projectId: "passportgarmian",
+  storageBucket: "passportgarmian.appspot.com",
+  messagingSenderId: "198463130018",
+  appId: "1:198463130018:web:10b11e8db7e89c8ce60afb",
+  measurementId: "G-53YF7C5L2M"
 };
 
 
