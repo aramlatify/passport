@@ -1,20 +1,20 @@
 import React, { useEffect, useState, useRef, useReducer } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-
+import supabase from "./supabase";
 import { withStyles } from "@material-ui/core/styles";
 import tableIcons from "./TableIcons.js";
 import { useTheme } from "@material-ui/core/styles";
 import MaterialTable from "material-table";
-
+import { useQuery } from "react-query";
 import { TablePagination } from "@material-ui/core";
 import AdvancedFilter from "./AdvancedFilter";
 import { Toolbar } from "@material-ui/core";
-import { useDatabaseValue } from "@react-query-firebase/database";
 
 
-import { ref } from "firebase/database";
+
+
 import { Grid} from "@material-ui/core";
-import { database } from "./fb";
+
 import * as Layout from "./Layout";
 import * as Styled from "./styletebiny";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -167,19 +167,23 @@ const MaterialTableSearchDemo = ({id}) => {
     }
   ];
 
-  const dbRef = ref(database, `Nawakan`);
 
-  const second = 1000;
-  const minute = 60 * second;
-  const twoMinutes = 120 * minute;
-  const { status, data, isLoading } = useDatabaseValue(["Nawakan"], dbRef, {
-    subscribe: true,
-    cacheTime: twoMinutes,
-    refetchOnMount: false,
-    refetchOnWindowFocus: false,
-    staleTime: twoMinutes
-  });
 
+  const { data } = useQuery(
+    "passport",
+    function () {
+      return supabase
+        .from("aram")
+        .select("*");
+        
+    },
+    {
+      select: ({ data }) => data
+    }
+  );
+
+  
+  
   const [items, setItems] = useState([]);
 
   useEffect(() => {
